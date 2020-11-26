@@ -27,4 +27,4 @@ if __name__ == "__main__":
         k = -(-pa[key] // pb[key])
         if k > n:
             n = k
-    print(n) # вывод числа
+    print("\n" + str(n))  # вывод числа
