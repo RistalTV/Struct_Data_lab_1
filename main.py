@@ -1,17 +1,20 @@
 def factorization(n):
-    p = []
+    """
+    Разложение на простые множители
+    :param n: число которое надо декомпозицировать
+    :return p: простые множители
+    """
+    p = {}
     d = 2
     while d * d <= n:
         while n % d == 0:
-            p.append(d)
+            p[d] = p.get(d, 0) + 1
             n //= d
         d += 1
     if n > 1:
-        p.append(n)
-    ans = []
-    i = 0
-    
-a, b = int(input()), int(input())   # вводим числа
-if a == b == 1:                     # небольшая проверка на 1
-    print(1)
-else:
+        p[n] = p.get(n, 0) + 1
+    return p
+
+
+if "__name__" == "__main__":
+    a, b = int(input()), int(input())  # вводим числа
