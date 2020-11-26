@@ -16,5 +16,15 @@ def factorization(n):
     return p
 
 
-if "__name__" == "__main__":
+if __name__ == "__main__":
     a, b = int(input()), int(input())  # вводим числа
+    pa, pb = factorization(a), factorization(b)  # разложение на простые множители
+    n = 1
+    for key in pa:  # пробегаемся по словорю и ищим сам большой одинаковый результат
+        if not key in pb:
+            n = -1
+            break
+        k = -(-pa[key] // pb[key])
+        if k > n:
+            n = k
+    print(n) # вывод числа
