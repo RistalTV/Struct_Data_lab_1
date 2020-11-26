@@ -17,6 +17,8 @@ def factorization(n):
 
 
 if __name__ == "__main__":
+    print("Лабораторная работа №1")  # Основная информация
+    print("Выполнил: Скребнев Леонид Эдуардович ФИТУ 2-5")  # Основная информация
     a, b = int(input()), int(input())  # вводим числа
     pa, pb = factorization(a), factorization(b)  # разложение на простые множители
     n = 1
